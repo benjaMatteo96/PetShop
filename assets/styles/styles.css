@@ -1,5 +1,6 @@
 header{
     position: sticky;
+    top: 20px;
 }
 #header-div{
     display: flex;
@@ -34,7 +35,9 @@ header{
 
 
 
-
+main{
+    height: 100vh;
+}
 
 
 /* footer */
@@ -47,11 +50,19 @@ header{
 }
 .footer-text{
     color: white;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
-
-
-/* Benja */
-.tarjeta-juguetes {
-   border: 1px solid green;
+#contenedor-span{
+    display: flex;
+    flex-direction: column;
+}
+#span1{
+    height: 10vh;
+    background-color: red;
+    padding: 1rem;
+}
+#span2{
+    height: 20vh;
+    background-color: blue;
+    padding: 1rem;
 }
