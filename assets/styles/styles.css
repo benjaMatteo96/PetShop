@@ -1,0 +1,68 @@
+header{
+    position: sticky;
+    top: 20px;
+}
+#header-div{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+#carrito{
+    font-size: 2.5rem;
+}
+#icono-titulo-div{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+#imagen-header{
+    object-fit: cover;
+    height: 7vh;
+}
+#header-nav{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: gray;
+    padding: 0.5rem;
+}
+#header-nav>a{
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.5rem ;
+    background-color: rgb(255, 93, 93);
+}
+
+
+
+
+main{
+    height: 100vh;
+}
+
+
+/* footer */
+#footer-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    background-color: gray;
+}
+.footer-text{
+    color: white;
+    font-size: 0.9rem;
+}
+#contenedor-span{
+    display: flex;
+    flex-direction: column;
+}
+#span1{
+    height: 10vh;
+    background-color: red;
+    padding: 1rem;
+}
+#span2{
+    height: 20vh;
+    background-color: blue;
+    padding: 1rem;
+}
