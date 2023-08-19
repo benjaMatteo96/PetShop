@@ -9,13 +9,13 @@ fetch("https://mindhub-xj03.onrender.com/api/petshop")
   console.log(listaJuguetes)
 
 function crearTarjetas(array){
-    array.forEach(element => {
+    array.forEach(elemento => {
     contenedor_juguetes.innerHTML =   
       `<div class="card" style="width: 18rem;">
-      <img src="${element.imagen}" class="card-img-top tarjeta-juguetes" alt="...">
+      <img src="${elemento.imagen}" class="card-img-top tarjeta-juguetes" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 class="card-title">${elemento.producto}</h5>
+        <p class="card-text">${elemento.descripcion}</p>
         <a href="#" class="btn btn-primary">Comprar</a>
       </div>
     </div>`
