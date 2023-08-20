@@ -4,7 +4,7 @@ export function crearTarjetas(array,contenedor) {
     card.classList.add('card');
     card.style.width = '18rem';
     card.innerHTML = `
-      <img src="${elemento.imagen}" class="card-img-top tarjeta-juguetes" alt="...">
+      <img src="${elemento.imagen}" class="card-img tarjeta-juguetes" alt="...">
       <div class="card-body">
         <h5 class="card-title">${elemento.producto}</h5>
         <p class="card-text">${elemento.descripcion.substring(0, 100)}</p>
