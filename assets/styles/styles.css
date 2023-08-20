@@ -71,7 +71,10 @@ h1{
     margin-bottom: 2rem;
 }
 
-
+/*main*/
+.form-control{
+    min-width: 15rem
+}
 
 
 
