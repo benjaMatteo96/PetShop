@@ -170,7 +170,7 @@ h4{
 
 /* Estilos Pagina Juguetes */
 .card-img {
-    height: 20rem;
-    object-fit: cover;
+    height: 18rem;
+    object-fit: contain;
 }
  

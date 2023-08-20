@@ -12,7 +12,7 @@ fetch("https://mindhub-xj03.onrender.com/api/petshop")
  
   const listaJuguetes = listaPetShop.filter(elementos => elementos.categoria === "jugueteria")
   console.log(listaJuguetes)
-  crearTarjetas(listaJuguetes,contenedor_juguetes)
+  crearTarjetas(listaJuguetes,contenedorCards)
 
 })
 
