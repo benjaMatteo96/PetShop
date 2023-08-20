@@ -1,3 +1,5 @@
+import {crearTarjetas} from "../modules/funciones.js";
+
 const contenedorCards = document.getElementById('contenedorCards');
 
 fetch('https://mindhub-xj03.onrender.com/api/petshop')
@@ -6,10 +8,10 @@ fetch('https://mindhub-xj03.onrender.com/api/petshop')
     const arrayGeneral = array;
     const arrayFarmacia = arrayGeneral.filter(farmacias => farmacias.categoria === "farmacia");
     console.log(arrayFarmacia);
-    crearTarjetas(arrayFarmacia);
+    crearTarjetas(arrayFarmacia,contenedorCards);
   });
 
-function crearTarjetas(array) {
+/* function crearTarjetas(array,contenedor) {
   array.forEach(elemento => {
     const card = document.createElement('div');
     card.classList.add('card');
@@ -25,7 +27,7 @@ function crearTarjetas(array) {
         <a href="#" class="btn btn-primary">Comprar</a>
       </div>
     `;
-    contenedorCards.appendChild(card);
+    contenedor.appendChild(card);
 
     const botonLeerMas = card.querySelector('.btn-leermas');
     const moreText = card.querySelector('.more');
@@ -36,4 +38,4 @@ function crearTarjetas(array) {
     });
   });
 }
-
+ */

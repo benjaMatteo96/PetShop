@@ -1,3 +1,5 @@
+import { crearTarjetas } from "../modules/funciones.js"
+
 const contenedor_juguetes = document.getElementById("contenedor-juguetes")
 
 fetch("https://mindhub-xj03.onrender.com/api/petshop")
@@ -10,28 +12,8 @@ fetch("https://mindhub-xj03.onrender.com/api/petshop")
  
   const listaJuguetes = listaPetShop.filter(elementos => elementos.categoria === "jugueteria")
   console.log(listaJuguetes)
+  crearTarjetas(listaJuguetes,contenedor_juguetes)
 
-function crearTarjetas(array){
-    array.forEach(elemento => {
-    contenedor_juguetes.innerHTML +=   
-      `<div class="card" style="width: 18rem;">
-      <img src="${elemento.imagen}" class="card-img" alt="...">
-      <div class="card-body">
-        <h4 class="card-title">${elemento.producto}</h4>
-        <div class ="d-flex  justify-content-around">
-          <p>Precio: ${elemento.precio}</p>
-          <p>Stock: ${elemento.disponibles}</p>
-        </div>
-        
-        <a href="#" class="btn btn-primary">Agregar al carrito</a>
-        <a href="#" class="btn btn-primary">Detalles</a>
-      </div>
-    </div>`
-  });
-
- 
-}
-crearTarjetas(listaJuguetes)
 })
 
 
