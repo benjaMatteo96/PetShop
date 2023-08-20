@@ -82,10 +82,13 @@ main{
     height: 100vh;
 }
 
-.card{
-    
+#contenedor-checkbox {
+    max-width: 20%;
 }
 
+#contenedorCards>.card{
+    background-color: #fcf802;
+}
 /* footer */
 
 #footer-div{
