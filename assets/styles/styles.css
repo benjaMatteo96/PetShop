@@ -165,7 +165,9 @@ h4{
     height: 4vh;
 }
 
-/* Estilos Pagina Jugetes */
-.seccion-checkBox {
-    width: 30rem;
+/* Estilos Pagina Juguetes */
+.card-img {
+    height: 20rem;
+    object-fit: cover;
 }
+ 

@@ -15,11 +15,16 @@ function crearTarjetas(array){
     array.forEach(elemento => {
     contenedor_juguetes.innerHTML +=   
       `<div class="card" style="width: 18rem;">
-      <img src="${elemento.imagen}" class="card-img-top tarjeta-juguetes" alt="...">
+      <img src="${elemento.imagen}" class="card-img" alt="...">
       <div class="card-body">
-        <h5 class="card-title">${elemento.producto}</h5>
-        <p class="card-text">${elemento.descripcion}</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <h4 class="card-title">${elemento.producto}</h4>
+        <div class ="d-flex  justify-content-around">
+          <p>Precio: ${elemento.precio}</p>
+          <p>Stock: ${elemento.disponibles}</p>
+        </div>
+        
+        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+        <a href="#" class="btn btn-primary">Detalles</a>
       </div>
     </div>`
   });
