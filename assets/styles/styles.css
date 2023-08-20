@@ -1,7 +1,7 @@
 :root{
-    --primario:#46E632;
-    --secundario:#8F30CE;
-    --terciario:#F2EF3B;
+    --primario:#37ce76;
+    --secundario:#eb9696;
+    --terciario:#f0efaa;
 }
 *{
     margin: 0;
@@ -13,17 +13,14 @@ body{
     flex-direction: column;
 }
 header{
-    position: sticky;
-    top: 20px;
-}
-#header-div{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     z-index: 99;
-    background-color: rgb(255, 255, 255);
     box-shadow: 0px 1px 15px 0px ;
+    height: 8vh;
+    background-color: var(--primario);
 }
 #header-div{
     display: flex;
@@ -31,10 +28,11 @@ header{
 
 }
 h1{
-    font-size: 4rem !important;
+    font-size: 2rem !important;
 }
 #carrito{
     font-size: 2.5rem;
+    color: white;
 }
 #imagen-header{
     object-fit: cover;
@@ -48,11 +46,10 @@ h1{
     width: 40vw;
 }
 #header-nav>a{
-    padding: 0.4rem 1rem;
-    border-radius: 0.5rem ;
-    background-color: var(--secundario);  
+    padding: 0.2rem 0.9rem;
+    border-radius: 0.5rem ; 
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-decoration: none;
 }
 #contenedor-banner{
@@ -61,7 +58,6 @@ h1{
 .imagen-banner{
     height: 80vh;
 }
-
 
 .imagenCarrousel{
     height: 45vh;
@@ -78,17 +74,8 @@ h1{
 
 
 
-main{
-    height: 100vh;
-}
 
-#contenedor-checkbox {
-    max-width: 20%;
-}
 
-#contenedorCards>.card{
-    background-color: #fcf802;
-}
 /* footer */
 
 #footer-div{
@@ -105,7 +92,7 @@ main{
 
 
 #contenedor-footer{
-    height: 45vh;
+    height: 21rem;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -154,13 +141,26 @@ li{
     display: flex;
     flex-direction: column;
 }
-#span1{
-    height: 10vh;
-    background-color: red;
-    padding: 1rem;
+.footer-redes-icono{
+    height: 4vh;
 }
-#span2{
-    height: 20vh;
-    background-color: blue;
-    padding: 1rem;
+#redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#mediosPagosText{
+    font-size: 0.9rem;
+}
+h4{
+    font-size: 1rem !important;
+    font-weight: bold !important;
+}
+#mediosPagos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-pago-icono{
+    height: 4vh;
 }
