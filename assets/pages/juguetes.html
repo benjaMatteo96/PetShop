@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juguetes</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="stylesheet" href="../styles/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juguetes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
+
 <body>
     <header class="sticky-top">
         <div id="header-div">
-        <a id="contenedor-imagen-header"href="#"><img id="imagen-header" src="./assets/images/tienda-de-animales.png" alt=""></a>
-        <h1>Pet Shop</h1>
+            <a id="contenedor-imagen-header" href="#"><img id="imagen-header"
+                    src="./assets/images/tienda-de-animales.png" alt=""></a>
+            <h1>Pet Shop</h1>
         </div>
         <nav id="header-nav">
             <a href="../../index.html">Inicio</a>
@@ -22,23 +26,56 @@
         <a href=""><i id="carrito" class="bi bi-basket"></i></a>
     </header>
 
-    <main>
-    <div class="contenedor-tarjetas d-flex flex-wrap justify-content-center gap-5 mt-5" id="contenedor-juguetes">
-      
-    </div>
-    </main>
-    
+    <main class="d-flex gap-4">
+        <div >
+            <div>
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <i class="bi bi-search"></i>
+                  </form>
+                </div>
+            </div>
+            </nav>
+            <div class="d-flex flex-column gap-3 mt-5 mx-4">
+                <div>
+            <input type="checkbox" name="" id="de0a999">
+            <label for="de0a999">$0-$999</label>
+        </div>
+        <div>
+            <input type="checkbox" name="" id="de1000a1999">
+            <label for="de1000a1999">$1000-$1999</label>
+            </div>
+        <div>
+            <input type="checkbox" name="" id="de2000a2999">
+            <label for="de2000a2999">$2000-$2999</label>
+        </div>
+        <div>
+            <input type="checkbox" name="" id="de3000omas">
+            <label for="de3000omas">$3000 o más</label>
+        </div>
+        </div>
+        </div>
+        <div class="contenedor-tarjetas d-flex flex-wrap justify-content-center gap-5 mt-5" id="contenedorCards">
+          
+        </div>
+        
+            
+        
+        </main>
+
     <footer>
 
         <div id="contenedor-footer">
             <span class="d-flex">
                 <img id="imagen-header" src="./assets/images/tienda-de-animales.png" alt="">
-                 <p class="fs-1">Pet Shop</p>
-             </span>
-             
+                <p class="fs-1">Pet Shop</p>
+            </span>
+
             <span class="d-flex justify-content-evenly align-items-start p-2">
-                
-                
+
+
                 <div id="listas">
                     <ul>
                         <dt class="mb-3">Contacto</dt>
@@ -47,15 +84,18 @@
                         <li class="contacto">Horarios de Atencion:</li>
                         <li>Lunes a Viernes</li>
                         <li>10:00 a 19:00</li>
-                        
-                    </ul>   
+
+                    </ul>
 
                     <div class="div-ubicacion">
-                        <p class="direccion">Direccion: 
+                        <p class="direccion">Direccion:
                         <p>Paraguay 2334 5 F</p>
-                        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1808.070157524983!2d-58.402150028392775!3d-34.59796520780488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca9158e82c41%3A0x6a1cd58fa7e6383d!2sParaguay%202334%205%20f%2C%20C1121ABL%20CABA!5e0!3m2!1ses-419!2sar!4v1692495998873!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                            
+                        <iframe class="mapa"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1808.070157524983!2d-58.402150028392775!3d-34.59796520780488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca9158e82c41%3A0x6a1cd58fa7e6383d!2sParaguay%202334%205%20f%2C%20C1121ABL%20CABA!5e0!3m2!1ses-419!2sar!4v1692495998873!5m2!1ses-419!2sar"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    
+
                     <ul>
                         <dt>Productos</dt>
                         <li>Perros</li>
@@ -84,7 +124,8 @@
                             <a href=""><img class="footer-redes-icono" src="./assets/images/visa.png" alt=""></a>
                             <a href=""><img class="footer-redes-icono" src="./assets/images/mercadopago.png" alt=""></a>
                             <a href=""><img class="footer-redes-icono" src="./assets/images/mastercard.png" alt=""></a>
-                            <a href=""><img class="footer-redes-icono" src="./assets/images/american-express.png" alt=""></a>
+                            <a href=""><img class="footer-redes-icono" src="./assets/images/american-express.png"
+                                    alt=""></a>
                         </div>
                         <p id="mediosPagosText">efectivo - transferencia bancaria</p>
                     </div>
@@ -104,14 +145,18 @@
 
         </div>
 
-    <div id="footer-div">
-        <h5 class="footer-text">Cohort50</h5>
-        <h6 class="footer-text">Created by: Benjamin Mateo, Martin Leonel Galan, Sofia Alvarado, Juan Aysen Corral </h6>
-    </div>
+        <div id="footer-div">
+            <h5 class="footer-text">Cohort50</h5>
+            <h6 class="footer-text">Created by: Benjamin Mateo, Martin Leonel Galan, Sofia Alvarado, Juan Aysen Corral
+            </h6>
+        </div>
 
-</footer>
+    </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  <script src="../scripts/juguetes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script type="module" src="../scripts/juguetes.js"></script>
 </body>
+
 </html>

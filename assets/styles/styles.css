@@ -167,3 +167,10 @@ h4{
 .footer-pago-icono{
     height: 4vh;
 }
+
+/* Estilos Pagina Juguetes */
+.card-img {
+    height: 18rem;
+    object-fit: contain;
+}
+ 

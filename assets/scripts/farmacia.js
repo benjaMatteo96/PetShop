@@ -1,3 +1,5 @@
+import {crearTarjetas} from "../modules/funciones.js";
+
 const contenedorCards = document.getElementById('contenedorCards');
 const buscador = document.getElementById('buscador')
 const contenedorCheckbox = document.getElementById('contenedorCheckbox')
@@ -8,7 +10,7 @@ fetch('https://mindhub-xj03.onrender.com/api/petshop')
     const arrayGeneral = array;
     const arrayFarmacia = arrayGeneral.filter(farmacias => farmacias.categoria === "farmacia");
     console.log(arrayFarmacia);
-    crearTarjetas(arrayFarmacia);
+    crearTarjetas(arrayFarmacia,contenedorCards);
   });
 
 function crearTarjetas(array) {
