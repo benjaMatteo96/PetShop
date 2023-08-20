@@ -1,4 +1,6 @@
 const contenedorCards = document.getElementById('contenedorCards');
+const buscador = document.getElementById('buscador')
+const contenedorCheckbox = document.getElementById('contenedorCheckbox')
 
 fetch('https://mindhub-xj03.onrender.com/api/petshop')
   .then(response => response.json())
@@ -36,4 +38,6 @@ function crearTarjetas(array) {
     });
   });
 }
+
+
 
