@@ -4,20 +4,20 @@ const contenedorCheckBoxes = document.getElementById("contenedor-checkboxes")
 
 const arrayObjetos = [
   { rango: "$0 - $999", 
-    valor: 999 },
+    valor: 1 },
 
   { rango: "$1000 - $1999",
-   valor: 1999 },
+   valor: 2 },
 
   {
     rango: "$2000 - $2999",
-    valor:2999
+    valor:3 
     
   },
 
   {
     rango: "$3000",
-    valor: 3000
+    valor: 4
   }
 
 ]
@@ -37,18 +37,39 @@ fetch("https://mindhub-xj03.onrender.com/api/petshop")
 
     imprimirCheckbox(contenedorCheckBoxes, arrayObjetos)
 
-    contenedorCheckBoxes.addEventListener("click",filtroPorCheck )
-    filtroPorCheck(listaJuguetes)
-  })
+    contenedorCheckBoxes.addEventListener('change', ()=>{
+    
+      const tarjetas=filtradoPrecio(listaJuguetes)
+      console.log(tarjetas);
 
-  const primerCheck=[]
-  function filtroPorCheck(lista) {
-    const checkedBox= document.querySelectorAll("input[type='checkbox']:checked")
-    const arrayCheckedBox = Array.from(checkedBox)
-    const filtrarPrecios = lista.filter(objeto => {
-      if(objeto.precio <= arrayCheckedBox){
-        primerCheck.push(filtrarPrecios)
+  })});
+
+  function filtradoPrecio(array) {
+    const checkboxSeleccionados = document.querySelectorAll('input[type=checkbox]:checked')
+      const valoresCheckbox = Array.from(checkboxSeleccionados).map((checkbox)=>checkbox.value)
+      if (valoresCheckbox.length===0) {
+        return array
       }
-    })
-   
+
+      const tarjetasFiltradas=[]
+      if (valoresCheckbox.includes(`1`)) {
+        let a=array.filter((e)=>e.precio<999)
+        tarjetasFiltradas.push(...a)
+      }
+      if(valoresCheckbox.includes(`2`)){
+        let a=array.filter((e)=>e.precio>=1000 && e.precio<=1999)
+        tarjetasFiltradas.push(...a)
+      }
+      if(valoresCheckbox.includes(`3`)){
+        let a=array.filter((e)=>e.precio>=2000 && e.precio<=2999)
+        tarjetasFiltradas.push(...a)
+      }
+      if(valoresCheckbox.includes(`4`)){
+        let a=array.filter((e)=>e.precio>=3000)
+        tarjetasFiltradas.push(...a)  
+      }
+      
+      
+    return tarjetasFiltradas
   }
+  
