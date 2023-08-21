@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: url("../images/cursor2.png"),auto;
+    cursor: url("../images/patacursor.png"),auto;
     font-family: 'Montserrat', sans-serif;
 }
 body{
@@ -42,7 +42,7 @@ h1{
     position: absolute;
     object-fit: cover;
     height: 17rem;
-    transform: translate(-3vw,-21%)rotate(0.03turn);;
+    transform: translate(-3vw,-28%)rotate(0.03turn);;
     
 }
 #logo-footer{
@@ -80,7 +80,7 @@ h1{
 #contenedor-banner{
     margin-bottom: 2rem;
     display: flex;
-    height: 80vh;
+    min-height: 80vh;
     flex-direction: column;
     margin-top: 8vh;
     gap: 5vh;
