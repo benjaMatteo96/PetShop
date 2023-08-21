@@ -1,5 +1,6 @@
 export function crearTarjetas(array,contenedor) {
   array.forEach(elemento => {
+    
     const card = document.createElement('div');
     card.classList.add('card');
     card.style.width = '18rem';
@@ -10,6 +11,7 @@ export function crearTarjetas(array,contenedor) {
         <p class="card-text">${elemento.descripcion.substring(0, 100)}</p>
         <p class="card-text more" style="display: none;">${elemento.descripcion.substring(100)}</p>
         <p>Precio: $${elemento.precio}</p>
+        <p>Unidades disponibles: ${elemento.disponibles}</p>
         <a href="#" class="btn-leermas btn btn-primary">Leer más</a>
         <a href="#" class="btn btn-primary">Comprar</a>
       </div>
