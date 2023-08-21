@@ -45,16 +45,9 @@ fetch('https://mindhub-xj03.onrender.com/api/petshop')
       unidadesDisponibles(tarjetas)
 
   })
-      buscador.addEventListener('input', ()=>{
-        if (buscador) {
-        const busqueda = filtradoPorBusqueda(arrayFarmacia, buscador.value)
-        const tarjetas = filtradoPrecio(busqueda)
-        
-        contenedorCards.innerHTML = ''
-        crearTarjetas(tarjetas, contenedorCards)
-        unidadesDisponibles(tarjetas)
-        
-  }})
+      
+
+
 });
 
 

@@ -2,6 +2,9 @@ import { crearTarjetas, imprimirCheckbox } from "../modules/funciones.js"
 
 const contenedorCheckBoxes = document.getElementById("contenedor-checkboxes")
 
+const btnComprar = document.getElementById("btn-comprar")
+
+
 const arrayObjetos = [
   { rango: "$0 - $999", 
     valor: 1 },
@@ -39,16 +42,39 @@ fetch("https://mindhub-xj03.onrender.com/api/petshop")
 
     contenedorCheckBoxes.addEventListener('change', ()=>{
     
-      const tarjetas=filtradoPrecio(listaJuguetes)
-      console.log(tarjetas);
+      const busqueda = filtradoPorBusqueda(listaJuguetes, buscador.value)
+      const tarjetas = filtradoPrecio(busqueda)
+      contenedorCards.innerHTML = ''
+      crearTarjetas(tarjetas, contenedorCards)
+      unidadesDisponibles(tarjetas)
 
-  })});
+  })
+
+  buscador.addEventListener('input', ()=>{
+    if (buscador) {
+    const busqueda = filtradoPorBusqueda(listaJuguetes, buscador.value)
+    const tarjetas = filtradoPrecio(busqueda)
+    
+    contenedorCards.innerHTML = ''
+    crearTarjetas(tarjetas, contenedorCards)
+    unidadesDisponibles(tarjetas)
+    
+}})
+
+btnComprar.addEventListener("click", console.log("hola"))
+
+});
 
   function filtradoPrecio(array) {
     const checkboxSeleccionados = document.querySelectorAll('input[type=checkbox]:checked')
       const valoresCheckbox = Array.from(checkboxSeleccionados).map((checkbox)=>checkbox.value)
       if (valoresCheckbox.length===0) {
         return array
+      }
+
+      if(array.length===0){
+        
+          `<h4>¡Miau!, No hay nada para mostrar aqui ): </h4>`
       }
 
       const tarjetasFiltradas=[]
@@ -71,5 +97,10 @@ fetch("https://mindhub-xj03.onrender.com/api/petshop")
       
       
     return tarjetasFiltradas
+  }
+  
+  function filtradoPorBusqueda(listaJuguetes){
+    const filtrado = listaJuguetes.filter((evento)=>evento.producto.toLowerCase().includes(buscador.value.toLowerCase()))
+      return filtrado
   }
   

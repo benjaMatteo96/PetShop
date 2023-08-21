@@ -13,7 +13,7 @@ export function crearTarjetas(array,contenedor) {
         <p>Precio: $${elemento.precio}</p>
         <p>Unidades disponibles: ${elemento.disponibles}</p>
         <a href="#" class="btn-leermas btn btn-primary">Leer más</a>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <a href="#" class="btn btn-primary" id="btn-comprar">Comprar</a>
       </div>
     `;
     contenedor.appendChild(card);
@@ -27,6 +27,9 @@ export function crearTarjetas(array,contenedor) {
     });
   });
 }
+
+
+
 export function crearCheckbox(array){
   return `<div class="checkbox""><input type="checkbox" id="${array.valor}" value="${array.valor}">
   <label for="${array.valor}">${array.rango}</label></div>`
@@ -38,4 +41,12 @@ export function imprimirCheckbox(contenedor, array){
     const checkCreado = crearCheckbox(categoria)
     contenedor.innerHTML += checkCreado
   }
+}
+
+export function crearTarjetaCarrito(array){
+    
+  `<div class="product">
+    <h3>Producto: </h3>
+    <p>Precio: </p>
+    </div>`
 }
