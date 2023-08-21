@@ -25,3 +25,14 @@ export function crearTarjetas(array,contenedor) {
     });
   });
 }
+function crearCheckbox(array){
+  return `<div class="checkbox"><input type="checkbox" name="" id="${array}">
+  <label for="${array}">${array}</label></div>`
+}
+
+export function imprimirCheckbox(contenedor, array){
+  for (const categoria of array){
+    const checkCreado = crearCheckbox(categoria)
+    contenedor.innerHTML += checkCreado
+  }
+}
