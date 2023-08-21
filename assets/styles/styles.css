@@ -1,12 +1,15 @@
 :root{
-    --primario:#37ce76;
-    --secundario:#eb9696;
+    --primario:#83bb04;
+    --secundario:#ab1f3b;
     --terciario:#f0efaa;
+
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: url("../images/cursor2.png"),auto;
+    font-family: 'Montserrat', sans-serif;
 }
 body{
     display: flex;
@@ -19,7 +22,7 @@ header{
     padding: 1rem 2rem;
     z-index: 99;
     box-shadow: 0px 1px 15px 0px ;
-    height: 8vh;
+    height: 12vh;
     background-color: var(--primario);
 }
 #header-div{
@@ -33,43 +36,117 @@ h1{
 #carrito{
     font-size: 2.5rem;
     color: white;
+    margin-left: 10vw;
 }
-#imagen-header{
+#logo-header{
+    position: absolute;
     object-fit: cover;
-    height: 7vh;
+    height: 17rem;
+    transform: translate(-3vw,-21%)rotate(0.03turn);;
+    
+}
+#logo-footer{
+    object-fit: cover;
+    height: 7rem;
 }
 #header-nav{
     display: flex;
     justify-content: space-around;  
     padding: 0.5rem;
     border-radius: 1rem;
-    width: 40vw;
+    width: 50vw;
+    gap: 1rem;
+    margin-left: 18vw;
+    
+    /* background-color: var(--secundario); */
+}
+#whatsapp-icon{
+    position: absolute;
+    height: 4rem;
+    transform: translate(-5vw,950%);
 }
 #header-nav>a{
     padding: 0.2rem 0.9rem;
     border-radius: 0.5rem ; 
     color: white;
     font-size: 1.5rem;
+    font-weight: bold;
     text-decoration: none;
 }
+
+
+
+/* home */
 #contenedor-banner{
     margin-bottom: 2rem;
-}
-.imagen-banner{
+    display: flex;
     height: 80vh;
+    flex-direction: column;
+    margin-top: 8vh;
+    gap: 5vh;
 }
-
+.imagenHome{
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.primera{
+    height: 20rem;
+    width: 20rem;
+    background-image: url(../images/gato-bienvenida.jpg);
+    background-position: center;
+}
+.mjsBienvenida{
+    font-size: 3rem;
+    width: 35vw;
+    font-weight: bold;
+}
+.segunda{
+    background-image: url(../images/perro-bienvenida.jpg);
+    height: 15rem;
+    width: 15rem;
+    background-position: center;
+}
+.segundoMensaje{
+    font-size: 2rem;
+    width: 40vw;
+}
+#letra{
+    height: 1.5rem;
+}
 .imagenCarrousel{
-    height: 45vh;
+    height: 45vh;   
     object-fit: cover;
+    border-radius: 2rem;
 }
-.carousel-caption{
-   transform: translate(55vw, -50%) !important; 
-   width: 25vw;
+.contenido-carrousel{
+    justify-content: center;
+}
+.carousel-item{
+    border-radius: 2rem;
+} 
+.carousel-control-next-icon {
+    background-color: black;
+    
+}
+.carousel-control-prev-icon{
+    background-color: black;
+}
+.texto-carousel{
+    background-color: var(--primario);
+    border-radius: 2rem;
+    padding: 1rem;
+    border:1px solid black;
+    width: 30vw;
 }
 #carouselExampleCaptions{
     margin-bottom: 2rem;
 }
+
+body::-webkit-scrollbar{
+    width: 1vw;
+background-color: #4d5066}
 
 /*main*/
 .form-control{
@@ -99,7 +176,7 @@ h1{
 
 
 #contenedor-footer{
-    height: 21rem;
+    min-height: 20vh;
     padding: 1rem;
     display: flex;
     flex-direction: column;
