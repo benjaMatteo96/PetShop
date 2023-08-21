@@ -25,8 +25,8 @@ export function crearTarjetas(array,contenedor) {
     });
   });
 }
-function crearCheckbox(array){
-  return `<div class="checkbox"><input type="checkbox" name="" id="${array.valor}">
+export function crearCheckbox(array){
+  return `<div class="checkbox"><input type="checkbox" name="" id="${array.valor}" value="${array.valor}">
   <label for="${array.valor}">${array.rango}</label></div>`
 }
 
