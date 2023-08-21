@@ -38,10 +38,24 @@ fetch('https://mindhub-xj03.onrender.com/api/petshop')
 
     contenedorCheckbox.addEventListener('change', ()=>{
     
-      const tarjetas=filtradoPrecio(arrayFarmacia)
-      console.log(tarjetas);
+      const busqueda = filtradoPorBusqueda(arrayFarmacia, buscador.value)
+      const tarjetas = filtradoPrecio(busqueda)
+      contenedorCards.innerHTML = ''
+      crearTarjetas(tarjetas, contenedorCards)
+      unidadesDisponibles(tarjetas)
 
-  })});
+  })
+      buscador.addEventListener('input', ()=>{
+        if (buscador) {
+        const busqueda = filtradoPorBusqueda(arrayFarmacia, buscador.value)
+        const tarjetas = filtradoPrecio(busqueda)
+        
+        contenedorCards.innerHTML = ''
+        crearTarjetas(tarjetas, contenedorCards)
+        unidadesDisponibles(tarjetas)
+        
+  }})
+});
 
 
 function filtradoPrecio(array) {
@@ -73,6 +87,21 @@ function filtradoPrecio(array) {
   return tarjetasFiltradas
 }
 
+function filtradoPorBusqueda(arrayFarmacia){
+  const filtrado = arrayFarmacia.filter((evento)=>evento.producto.toLowerCase().includes(buscador.value.toLowerCase()))
+    return filtrado
+}
+
+function unidadesDisponibles (array, contenedorCards){
+    for (const unidad of array){
+      if(unidad.disponibles ===1){
+        contenedorCards.innerHTML=`<h2>¡Última unidad!</h2>`
+      }
+      if(unidad.disponibles === 0){        
+        contenedorCards.innerHTML=`<h2>No hay stock</h2>`
+      }
+    }
+}
 
 
 
