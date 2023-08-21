@@ -26,12 +26,13 @@ export function crearTarjetas(array,contenedor) {
   });
 }
 function crearCheckbox(array){
-  return `<div class="checkbox"><input type="checkbox" name="" id="${array}">
-  <label for="${array}">${array}</label></div>`
+  return `<div class="checkbox""><input type="checkbox" id="${array.valor}" value="${array.valor}">
+  <label for="${array.valor}">${array.rango}</label></div>`
 }
 
 export function imprimirCheckbox(contenedor, array){
   for (const categoria of array){
+    
     const checkCreado = crearCheckbox(categoria)
     contenedor.innerHTML += checkCreado
   }
