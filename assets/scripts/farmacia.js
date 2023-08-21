@@ -38,17 +38,9 @@ fetch('https://mindhub-xj03.onrender.com/api/petshop')
 
   function filtrarCheckbox(arrayFarmacia){
     const checkboxSeleccionados = document.querySelectorAll('input[type=checkbox]:checked')
+    console.log(checkboxSeleccionados)
     const valoresCheckbox = Array.from(checkboxSeleccionados).map((input)=>input.value)
     console.log(valoresCheckbox)
-    const filtrado = arrayFarmacia.filter((producto)=>{
-      
-      if(producto.precio<=999){
-        const arrayDeArrays = valoresCheckbox[0].push(producto.precio)
-        console.log(arrayDeArrays)
-      }
-    })
-  
-    return filtrado
   }
 
 
