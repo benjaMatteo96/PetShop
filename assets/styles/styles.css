@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: url("../images/cursor2.png"),auto;
+    cursor: url("../images/patacursor.png"),auto;
     font-family: 'Montserrat', sans-serif;
 }
 body{
@@ -42,7 +42,7 @@ h1{
     position: absolute;
     object-fit: cover;
     height: 17rem;
-    transform: translate(-3vw,-21%)rotate(0.03turn);;
+    transform: translate(-3vw,-28%)rotate(0.03turn);;
     
 }
 #logo-footer{
@@ -122,6 +122,7 @@ h1{
 }
 .contenido-carrousel{
     justify-content: center;
+    align-items: center;
 }
 .carousel-item{
     border-radius: 2rem;
@@ -148,11 +149,14 @@ body::-webkit-scrollbar{
     width: 1vw;
 background-color: #4d5066}
 
+
 /*main*/
 .form-control{
     min-width: 15rem
 }
-
+main{
+    min-height: 48vh;
+}
 .checkbox{
     width: 10rem
 }
@@ -173,7 +177,12 @@ background-color: #4d5066}
     color: white;
     font-size: 0.9rem;
 }
-
+.span-footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    padding: 2rem;
+}
 
 #contenedor-footer{
     min-height: 20vh;
@@ -255,3 +264,92 @@ h4{
     object-fit: contain;
 }
  
+
+
+@media only screen and (max-width: 767px) {
+
+/* footer */
+#footer-div{
+    padding: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center
+}
+
+.hidden{
+    display: none;
+}
+.span-footer{
+    flex-direction: column;
+    align-items: center;
+}
+
+#listas{
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  
+}
+.div-ubicacion{
+    justify-content: center;
+}
+.mapa{
+    width: 50vw;
+    height: 15vh;
+    border-radius: 1rem;
+}
+
+
+/*
+.direccion{
+    font-weight: bold
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+dt{
+    font-size: 1rem;
+}
+li{
+    list-style: none;
+    font-size: 0.8rem;
+}
+.contacto{
+    font-size: 0.9rem;
+    font-weight: bold;
+} */
+
+
+/* medios de pagos y redes */
+/* #mediosPagosyRedes{
+    display: flex;
+    flex-direction: column;
+}
+.footer-redes-icono{
+    height: 4vh;
+}
+#redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#mediosPagosText{
+    font-size: 0.9rem;
+}
+h4{
+    font-size: 1rem !important;
+    font-weight: bold !important;
+}
+#mediosPagos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-pago-icono{
+    height: 4vh;
+} */
+}
