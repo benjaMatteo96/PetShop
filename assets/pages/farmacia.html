@@ -17,9 +17,9 @@
 </head>
 
 <body>
-    <header class="sticky-top">
+    <header class="col-sm-12">
         <div id="header-div">
-        <a id="contenedor-imagen-header"href="#"><img id="logo-header" src="../images/logo.png" alt=""></a>
+        <a id="contenedor-imagen-header" href="#"><img id="logo-header" src="../images/logotype.png" alt=""></a>
         </div>
         <nav id="header-nav">
             <a href="../../index.html">Inicio</a>
@@ -28,60 +28,65 @@
             <a href="#">Farmacia</a>
         </nav>
         <a href=""><i id="carrito" class="bi bi-basket"></i></a>
-        <a href=""><img id="whatsapp-icon" src="../images/whatsapp.png" alt=""></a>
+        <a href="https://web.whatsapp.com/"><img id="whatsapp-icon" src="../images/whatsapp.png" alt=""></a>
     </header>
 
-    <main class="gap-4">
-    <div class="d-flex mt-5">
-        <div class="d-flex justify-content-evenly align-items-center mt-3">
-            <nav class="navbar bg-body-tertiary">
+    <main>
+        <h1 class="text-dark mt-3">Farmacia</h1>
+    <div class="contenedorFiltros">
+        <div class="filtradores">
+            <nav class="navbar">
                 <div class="container-fluid">
-                    <form class="" role="search">
+                    <form class="d-flex align-items-center" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="buscador">
+                        <i class="bi bi-search"></i>
                     </form>
                 </div>
             </nav>
+            
+            <fieldset class="fielsetCheckbox">
+                <legend class="fs-6">Precio</legend>
+                <div id="contenedorCheckbox" class="d-flex gap-3 mx-4 align-items-center">
+                
+                </div>
+            </fieldset>
         </div>
         
-        <div class="d-flex mt-5 mx-4">
-            <div id="contenedorCheckbox" class="d-flex gap-3 mt-1 mx-4">
-                
-            </div>
+            
 
 
-        </div>
     </div>
-        <div class="contenedor-tarjetas d-flex flex-wrap justify-content-center gap-5 mt-5" id="contenedorCards">
+
+        <div class="contenedor-tarjetas d-flex flex-wrap justify-content-center gap-5 mt-1 mb-5" id="contenedorCards">
 
         </div>
 
     </main>
 
-    <footer>
+    <footer class="col-sm-12">
 
         <div id="contenedor-footer">
              
-            <span class="d-flex justify-content-evenly align-items-start p-2">
+            <span class="span-footer">
                 
                 
                 <div id="listas">
-                    <ul>
+                    <ul class="lista">
                         <dt class="mb-3">Contacto</dt>
                         <li class="contacto">Email:</li>
                         <li class="mb-2">petshop@gmail.com</li>
                         <li class="contacto">Horarios de Atencion:</li>
                         <li>Lunes a Viernes</li>
                         <li>10:00 a 19:00</li>
-                        
                     </ul>   
-
+    
                     <div class="div-ubicacion">
                         <p class="direccion">Direccion: 
                         <p>Paraguay 2334 5 F</p>
                         <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1808.070157524983!2d-58.402150028392775!3d-34.59796520780488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca9158e82c41%3A0x6a1cd58fa7e6383d!2sParaguay%202334%205%20f%2C%20C1121ABL%20CABA!5e0!3m2!1ses-419!2sar!4v1692495998873!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                            
                     </div>
                     
-                    <ul>
+                    <ul class="hidden lista">
                         <dt>Productos</dt>
                         <li>Perros</li>
                         <li>Gatos</li>
@@ -90,7 +95,7 @@
                         <li>Hamster</li>
                         <li>otros</li>
                     </ul>
-                    <ul>
+                    <ul class="hidden lista">
                         <dt>Farmacia</dt>
                         <li>Perros</li>
                         <li>Gatos</li>
@@ -100,41 +105,41 @@
                         <li>otros</li>
                     </ul>
                 </div>
-
+    
                 <div id="mediosPagosyRedes" class="d-flex flex-direction-column ">
-
+    
                     <div id="mediosPagos">
                         <h4>Medios de pago</h4>
                         <div class="d-flex justify-content-center">
-                            <a href=""><img class="footer-redes-icono" src="../images/visa.png" alt=""></a>
-                            <a href=""><img class="footer-redes-icono" src="../images/mercadopago.png" alt=""></a>
-                            <a href=""><img class="footer-redes-icono" src="../images/mastercard.png" alt=""></a>
-                            <a href=""><img class="footer-redes-icono" src="../images/american-express.png" alt=""></a>
+                            <img class="footer-redes-icono" src="../images/visa.png" alt="">
+                            <img class="footer-redes-icono" src="../images/mercadopago.png" alt="">
+                            <img class="footer-redes-icono" src="../images/mastercard.png" alt="">
+                            <img class="footer-redes-icono" src="../images/american-express.png" alt="">
                         </div>
                         <p id="mediosPagosText">efectivo - transferencia bancaria</p>
                     </div>
-
+    
                     <div id="redes">
                         <h4>Siguenos</h4>
                         <div>
-                            <a href=""><img class="footer-pago-icono" src="../images/twitter.png" alt=""></a>
-                            <a href=""><img class="footer-pago-icono" src="../images/instagram.png" alt=""></a>
-                            <a href=""><img class="footer-pago-icono" src="../images/facebook.png" alt=""></a>
+                            <a href="https://twitter.com/"><img class="footer-pago-icono" src="../images/twitter.png" alt=""></a>
+                            <a href="https://www.instagram.com/"><img class="footer-pago-icono" src="../images/instagram.png" alt=""></a>
+                            <a href="https://www.facebook.com/"><img class="footer-pago-icono" src="../images/facebook.png" alt=""></a>
                         </div>
                     </div>
-
+    
                 </div>
-
+    
             </span>
-
+    
         </div>
-
+    
     <div id="footer-div">
         <h5 class="footer-text">Cohort50</h5>
-        <h6 class="footer-text">Created by: Benjamin Mateo, Martin Leonel Galan, Sofia Alvarado, Juan Aysen Corral </h6>
+        <h6 class="footer-text">Created by:<br> Benjamin Mateo, Martin Leonel Galan, Sofia Alvarado, Juan Aysen Corral </h6>
     </div>
-
-</footer>
+    
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
