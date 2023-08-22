@@ -117,5 +117,3 @@ function filtradoPorBusqueda(arrayFarmacia){
 }
 
 
-
-
