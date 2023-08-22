@@ -24,13 +24,17 @@ const arrayObjetos = [
   }
 
 ]
+let arrayFarmacia=[]
+let storage = JSON.parse(localStorage.getItem('carrito'));
+let carrito= storage ? storage: [];
+
 
 
 fetch('https://mindhub-xj03.onrender.com/api/petshop')
   .then(response => response.json())
   .then(array => {
     const arrayGeneral = array;
-    const arrayFarmacia = arrayGeneral.filter(farmacias => farmacias.categoria === "farmacia");
+    arrayFarmacia = arrayGeneral.filter(farmacias => farmacias.categoria === "farmacia");
     console.log(arrayFarmacia);
     crearTarjetas(arrayFarmacia,contenedorCards);
     imprimirCheckbox(contenedorCheckbox, arrayObjetos)
@@ -55,6 +59,26 @@ fetch('https://mindhub-xj03.onrender.com/api/petshop')
         
         
   }})
+
+   contenedorCards.addEventListener('click', e=>{
+    const idProducto = e.target.dataset.id
+    if (idProducto){
+      const producto = carrito.find(elementoCarrito=>elementoCarrito._id==idProducto)
+     
+      if(producto){
+        const indiceProducto = carrito.findIndex((productoCarrito)=>productoCarrito._id ==idProducto )
+        carrito.splice(indiceProducto, 1)
+        //carrito=carrito.filter((elementoCarrito)=>{elementoCarrito.id !==producto})
+      }else {
+        const productos = arrayFarmacia.find((seleccionado => seleccionado._id==idProducto))
+        carrito.push(productos)
+      }
+      
+      localStorage.setItem('carrito', JSON.stringify(carrito))
+      console.log(carrito)
+    }
+
+   }) 
 });
 
 
