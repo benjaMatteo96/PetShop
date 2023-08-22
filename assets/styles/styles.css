@@ -80,7 +80,7 @@ h1{
 #contenedor-banner{
     margin-bottom: 2rem;
     display: flex;
-    height: 80vh;
+    min-height: 80vh;
     flex-direction: column;
     margin-top: 8vh;
     gap: 5vh;
