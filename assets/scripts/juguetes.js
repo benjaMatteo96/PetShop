@@ -1,4 +1,4 @@
-import { crearTarjetas, imprimirCheckbox } from "../modules/funciones.js"
+import { crearTarjetas, imprimirCheckbox, filtradoPrecio, filtradoPorBusqueda} from "../modules/funciones.js"
 
 const contenedorCheckBoxes = document.getElementById("contenedor-checkboxes")
 
@@ -25,7 +25,7 @@ const arrayObjetos = [
 
 ]
 
-const listaRangos= arrayObjetos.map(elemento => elemento.rango)
+// const listaRangos= arrayObjetos.map(elemento => elemento.rango)
 
 fetch("https://mindhub-xj03.onrender.com/api/petshop")
   .then(response => response.json())
@@ -44,63 +44,38 @@ fetch("https://mindhub-xj03.onrender.com/api/petshop")
     
       const busqueda = filtradoPorBusqueda(listaJuguetes, buscador.value)
       const tarjetas = filtradoPrecio(busqueda)
-      contenedorCards.innerHTML = ''
-      crearTarjetas(tarjetas, contenedorCards)
-      unidadesDisponibles(tarjetas)
 
+      if(tarjetas.length===0){
+        contenedorCards.innerHTML=``
+        contenedorCards.innerHTML+=` <div class="mensajeNoHay"><h4>¡Guau!, No hay nada para mostrar aqui ):</h4> 
+        <img class="imagenNoHay"src="../images/llorando.png" alt=""></div>`
+      }else{
+        contenedorCards.innerHTML = ''
+      crearTarjetas(tarjetas, contenedorCards)
+      }
   })
 
   buscador.addEventListener('input', ()=>{
     if (buscador) {
     const busqueda = filtradoPorBusqueda(listaJuguetes, buscador.value)
     const tarjetas = filtradoPrecio(busqueda)
-    
-    contenedorCards.innerHTML = ''
-    crearTarjetas(tarjetas, contenedorCards)
-    unidadesDisponibles(tarjetas)
-    
-}})
+    if(tarjetas.length===0){
+      contenedorCards.innerHTML=``
+      contenedorCards.innerHTML+=`<div class="mensajeNoHay"><h4>¡Guau!, No hay nada para mostrar aqui ):</h4> 
+      <img class="imagenNoHay"src="../images/llorando.png" alt=""></div>`
+    }else{
+        contenedorCards.innerHTML = ''
+        crearTarjetas(tarjetas, contenedorCards)
+    }
+}
+
+})
 
 btnComprar.addEventListener("click", console.log("hola"))
 
 });
 
-  function filtradoPrecio(array) {
-    const checkboxSeleccionados = document.querySelectorAll('input[type=checkbox]:checked')
-      const valoresCheckbox = Array.from(checkboxSeleccionados).map((checkbox)=>checkbox.value)
-      if (valoresCheckbox.length===0) {
-        return array
-      }
-
-      if(array.length===0){
-        
-          `<h4>¡Miau!, No hay nada para mostrar aqui ): </h4>`
-      }
-
-      const tarjetasFiltradas=[]
-      if (valoresCheckbox.includes(`1`)) {
-        let a=array.filter((e)=>e.precio<999)
-        tarjetasFiltradas.push(...a)
-      }
-      if(valoresCheckbox.includes(`2`)){
-        let a=array.filter((e)=>e.precio>=1000 && e.precio<=1999)
-        tarjetasFiltradas.push(...a)
-      }
-      if(valoresCheckbox.includes(`3`)){
-        let a=array.filter((e)=>e.precio>=2000 && e.precio<=2999)
-        tarjetasFiltradas.push(...a)
-      }
-      if(valoresCheckbox.includes(`4`)){
-        let a=array.filter((e)=>e.precio>=3000)
-        tarjetasFiltradas.push(...a)  
-      }
-      
-      
-    return tarjetasFiltradas
-  }
   
-  function filtradoPorBusqueda(listaJuguetes){
-    const filtrado = listaJuguetes.filter((evento)=>evento.producto.toLowerCase().includes(buscador.value.toLowerCase()))
-      return filtrado
-  }
+  
+  
   
